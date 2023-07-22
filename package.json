@@ -12,12 +12,15 @@
     "sitemap": "yarn next-sitemap"
   },
   "dependencies": {
+    "@emailjs/browser": "3.11.0",
     "@headlessui/react": "^1.7.14",
     "@heroicons/react": "^2.0.17",
     "autoprefixer": "^10.4.14",
     "classnames": "^2.3.2",
+    "email-js": "2.0.2",
     "next": "^13.4.1",
     "react": "^18.2.0",
+    "react-confetti": "6.1.0",
     "react-dom": "^18.2.0",
     "ts-pattern": "^4.2.2"
   },
