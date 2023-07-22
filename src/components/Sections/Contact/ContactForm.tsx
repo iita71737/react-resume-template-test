@@ -8,7 +8,12 @@ interface FormData {
   message: string;
 }
 
-const ContactForm: FC = memo((props) => {
+interface ContactFormProps {
+  isSubmitted: boolean;
+  setSubmitted: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const ContactForm: FC<ContactFormProps> = memo((props) => {
   console.log(process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID, 'EMAILJS_SERVICE_ID PUBLIC');
 
   const {
@@ -25,7 +30,6 @@ const ContactForm: FC = memo((props) => {
     [],
   );
 
-  // const [isSubmitted, setSubmitted] = useState(false);
   const [data, setData] = useState<FormData>(defaultData);
 
   const onChange = useCallback(
